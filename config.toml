@@ -1,7 +1,7 @@
 baseURL = "https://rusland1.nl/"
 languageCode = "nl-nl"
 title = "Rusland 1"
-theme = "ananke"
+theme = "cupper-hugo-theme"
 
 MetaDataFormat = "yaml"
 DefaultContentLanguage = "nl"
@@ -15,9 +15,17 @@ enableRobotsTXT = true
   priority = 0.5
   filename = "sitemap.xml"
 
+[taxonomies]
+  tag = "tags"
+  genre = "genres"
+  categorie = "categorieën"
+  onderwerp = "onderwerpen"
+  artiest = "artiesten"
+
+
 [params]
   favicon = ""
-  description = "The last theme you'll ever need. Maybe."
+  description = "over Rusland"
   facebook = ""
   twitter = ""
   instagram = ""
@@ -29,3 +37,47 @@ enableRobotsTXT = true
   background_color_class = "bg-black"
   featured_image = "/images/gohugo-default-sample-hero-image.jpg"
   recent_posts_number = 2
+
+[menu]
+  [[menu.nav]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.nav]]
+    name = "Taal"
+    url = "/taal/"
+    weight = 2
+  [[menu.nav]]
+    name = "Muziek"
+    url = "/muziek/"
+    weight = 3
+  [[menu.nav]]
+    name = "Land en Volk"
+    url = "/land-en-volk/"
+    weight = 4
+
+  [[menu.nav]]
+    name = "Tags"
+    url = "/tags/"
+    weight = 6
+
+  [[menu.nav]]
+    name = "Genres (mzk)"
+    url = "/genres/"
+    weight = 7
+
+  [[menu.nav]]
+    name = "Artiesten (mzk)"
+    url = "/artiesten/"
+    weight = 7
+
+  [[menu.nav]]
+    name = "Onderwerpen (l&v)"
+    url = "/onderwerpen/"
+    weight = 8
+
+  [[menu.nav]]
+    name = "Categorieën (taal)"
+    url = "/categorieën/"
+    weight = 9
+
