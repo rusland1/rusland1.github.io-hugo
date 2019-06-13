@@ -1,7 +1,9 @@
-baseURL = "https://rusland1.nl/"
+baseURL = "/"
 languageCode = "nl-nl"
 title = "Rusland 1"
 theme = "cupper-hugo-theme"
+relativeURLs = true
+canonifyURLs = false
 
 MetaDataFormat = "yaml"
 DefaultContentLanguage = "nl"
@@ -10,10 +12,12 @@ Paginate = 3 # this is set low for demonstrating with dummy content. Set to a hi
 googleAnalytics = ""
 enableRobotsTXT = true
 
-[sitemap]
-  changefreq = "monthly"
-  priority = 0.5
-  filename = "sitemap.xml"
+#[sitemap]
+#  changefreq = "monthly"
+#  priority = 0.5
+#  filename = "sitemap.xml"
+disableKinds = ["RSS"]
+
 
 [taxonomies]
   tag = "tags"
@@ -21,7 +25,6 @@ enableRobotsTXT = true
   categorie = "categorieën"
   onderwerp = "onderwerpen"
   artiest = "artiesten"
-
 
 [params]
   favicon = ""
