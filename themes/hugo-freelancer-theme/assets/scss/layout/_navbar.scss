@@ -1,33 +1,82 @@
+.topmenuwithlines{
+  align-items: unset !important;
+
+  .textitems{
+    margin-top:55px;
+  }
+  .textitems-shrink{
+    margin-top:43px;
+  }
+
+}
+
+.subsectionmenu{
+  background-color: #FF272E;
+
+  a{
+    font-family: $subtop-font-family;
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+  }
+}
+
+.subsectionmenu-fixed{
+  position: fixed;
+  top:105px;
+  padding:0 0 5px 0;
+  margin:0;
+  z-index:300;
+}
+
 .logorood{
   background-color: #FF272E;
 }
 
-.logoblauw{
+.logoblauw {
   background-color:#0532CD;
 }
 
-.logogroen{
+.logogroen {
   background-color: #05DA0A;
 }
 
-.logowit{
+.logowit {
   background-color: #fff;
 }
 
 #mainNav {
+  .navcolorbg{
+    background-image:url(../img/lines.png);
+    background-origin: padding-box;
+    background-repeat-y: no-repeat;
+    background-repeat-x: repeat;
+    background-position-y: 20px;
 
-  border-bottom: solid 1px green;
+    position:absolute;
+    top:0px;
+    left:0px;
+    right:0px;
+    height:138px;
+    background-color: #FF272E;
+  }
+
+  .navcolorbg-shrink{
+    height:134px;
+    transform: scale(1.0, 0.8) translate(0, -17px);
+  }
 
   padding:0;
   padding-bottom: 1rem;
-  font-family: $headings-font-family;
-  font-weight: $headings-font-weight;
-  /*
-  .navbar-toggler {
-    font-size: 80%;
-    padding: 0.8rem;
+
+  a {
+    color:black;
+    font-size:120%;
   }
-   */
+  a.active{
+    color:white;
+  }
+  font-weight: 700;
 
   div.sticky {
     position: relative;
@@ -51,12 +100,10 @@
 
   .circle {
     position:absolute;
-    height: 190px;
-    width: 190px;
+    height: 187px;
+    width: 187px;
     border-radius: 50%;
   }
-
-
 }
 
 @include media-breakpoint-up(lg) {
@@ -65,11 +112,8 @@
     padding-bottom: 1.5rem;
 
     transition: padding-top 0.3s, padding-bottom 0.3s;
-    .navbar-brand {
-      font-size: 1.75em;
-      transition: font-size 0.3s;
-    }
-    .navbar-nav {
+
+     .navbar-nav {
       margin-top: 0;
     }
     .navbar-nav > li.nav-item > a.nav-link.active {
@@ -115,9 +159,6 @@
       height:calc(190px/#{$logo-verkleiner});
       border-radius: 50%;
     }
-
-
-
   }
 }
 

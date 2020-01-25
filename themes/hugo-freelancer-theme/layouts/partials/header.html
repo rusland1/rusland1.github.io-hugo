@@ -1,13 +1,26 @@
-  <!-- Masthead -->
-  <header class="masthead bg-main-red text-white text-center">
+<!-- Masthead -->
+<header class="masthead bg-main-red text-center">
     <div class="container d-flex align-items-center flex-column">
+        <h1 class="masthead-heading text-uppercase mb-0">{{.Section}}</h1>
+    </div>
 
-      <!-- Masthead Heading -->
-      <h1 class="masthead-heading text-uppercase mb-0">MUZIEK</h1>
+    <div class="container-fluid d-flex align-items-center flex-column subsectionmenu" style="">
 
-      <!-- Masthead Subheading -->
-      <p class="masthead-subheading font-weight-light mb-0">Graphic Artist - Web Designer - Illustrator</p>
+        <div class="container-fluid d-flex" style="z-index:999999">
+            <div class="flex-fill d-flex">
+
+                {{ range .Site.Taxonomies.onderwerpen }}
+                <div class="flex-fill text-center textitems">
+                    <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+                </div>
+                {{ end }}
+
+            </div>
+
+        </div>
+
+
 
     </div>
-  </header>
+</header>
 

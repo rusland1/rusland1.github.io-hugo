@@ -68,33 +68,49 @@ var images = [];
 function preload() {
     for (var i = 1; i < 163; i++) {
         images[i] = new Image();
-        images[i].src = "img/logoseq/image-" + i.toString().padStart(4, '0') + ".png"
+        images[i].src = "/img/logoseq/image-" + i.toString().padStart(4, '0') + ".png"
     }
 }
 preload();
 
 var currentUrl = null;
-var imageControl = function( event ) {
 
-    var fromTop = $(window).scrollTop(), url = null;
+$(window).scroll(
+    function( event ) {
 
-    let scrollHeight = Math.max(
-        document.body.scrollHeight, document.documentElement.scrollHeight,
-        document.body.offsetHeight, document.documentElement.offsetHeight,
-        document.body.clientHeight, document.documentElement.clientHeight
-    );
-    console.log(scrollHeight);
+        if ($(window).scrollTop() >= 310) {
+            console.log('hihih');
+            $('.subsectionmenu').addClass('subsectionmenu-fixed');
+            $('.navcolorbg').addClass('navcolorbg-shrink');
+            $('.textitems').addClass('textitems-shrink');
+        }
+        else {
+            $('.subsectionmenu').removeClass('subsectionmenu-fixed');
+            $('.navcolorbg').removeClass('navcolorbg-shrink');
+            $('.textitems').removeClass('textitems-shrink');
+        }
 
-    cH = Math.ceil(fromTop/15)
+        var fromTop = $(window).scrollTop(), url = null;
 
-    if(cH > 0 && cH < 163) {
-        $(".logotxt").html(images[cH].src );
-        $("#logo").attr('src', images[cH].src);
+        let scrollHeight = Math.max(
+            document.body.scrollHeight, document.documentElement.scrollHeight,
+            document.body.offsetHeight, document.documentElement.offsetHeight,
+            document.body.clientHeight, document.documentElement.clientHeight
+        );
+        console.log(scrollHeight);
+
+        cH = Math.ceil(fromTop/15)
+
+        if(cH > 0 && cH < 163) {
+            $(".logotxt").html(images[cH].src );
+            $("#logo").attr('src', images[cH].src);
+        }
     }
 
-};
 
-$(window).scroll(imageControl);
+
+);
+
 $( document ).ready(function() {
 });
 

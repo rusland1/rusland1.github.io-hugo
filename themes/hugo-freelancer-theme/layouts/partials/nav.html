@@ -1,23 +1,45 @@
   <nav class="navbar navbar-expand-lg text-uppercase fixed-top" id="mainNav">
 
-    <div class="container-fluid xbg-main-red d-flex xjustify-content-around xbd-highlight">
-        <div class="bg-info flex-fill d-flex">
-            <div class="p-2 bg-info flex-fill text-center">1</div>
-            <div class="p-2 bg-warning flex-fill text-center">2</div>
-            <div class="p-2 bg-primary flex-fill text-center">3</div>
+    <div class="navcolorbg">
+    </div>
+
+    <div class="container-fluid d-flex topmenuwithlines" style="z-index:999999">
+        <div class="flex-fill d-flex">
+
+            {{ $current := . }}
+            {{ range .Site.Menus.nav1 }}
+            {{ $active := or ($current.IsMenuCurrent "nav1" .) ($current.HasMenuCurrent "nav1" .) }}
+            {{ $active = or $active (eq .Name $current.Title) }}
+            {{ $active = or $active (and (eq .Name "Blog") (eq $current.Section "post")) }}
+            {{ $active = or $active (and (eq .Name "Tags") (eq $current.Section "tags")) }}
+            <div class="flex-fill text-center textitems">
+                <a href="{{ .URL }}" {{ if $active }}class="active" aria-current="page"{{ end }}>{{ .Name }}</a>
+            </div>
+            {{ end }}
+
         </div>
-        <div class="xbg-warning xflex-fill">
+        <div class="">
             <div class="sticky">
                 <span class="circle logorood"></span>
-                <img src="img/logobg2.png" id="logobg" />
-                <img src="img/logoseq/image-0001.png" id="logo" />
+                <img src="/img/logobg2.png" id="logobg" />
+                <img src="/img/logoseq/image-0001.png" id="logo" />
             </div>
         </div>
-        <div class="bg-info flex-fill d-flex">
-            <div class="p-2 bg-info flex-fill text-center">1</div>
-            <div class="p-2 bg-warning flex-fill text-center">2</div>
-            <div class="p-2 bg-primary flex-fill text-center">3</div>
+        <div class="flex-fill d-flex">
+            {{ $current := . }}
+            {{ range .Site.Menus.nav2 }}
+            {{ $active := or ($current.IsMenuCurrent "nav2" .) ($current.HasMenuCurrent "nav2" .) }}
+            {{ $active = or $active (eq .Name $current.Title) }}
+            {{ $active = or $active (and (eq .Name "Blog") (eq $current.Section "post")) }}
+            {{ $active = or $active (and (eq .Name "Tags") (eq $current.Section "tags")) }}
+            <div class="flex-fill text-center textitems">
+                <a href="{{ .URL }}" {{ if $active }}class="active" aria-current="page"{{ end }}>{{ .Name }}</a>
+            </div>
+            {{ end }}
+
         </div>
+
+
 
 
     </div>

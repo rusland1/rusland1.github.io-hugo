@@ -1,6 +1,7 @@
 baseURL = "/"
 languageCode = "nl-nl"
 title = "Rusland 1"
+#theme = "cupper-hugo-theme"
 theme = "hugo-freelancer-theme"
 relativeURLs = true
 canonifyURLs = false
@@ -28,25 +29,9 @@ disableKinds = ["RSS"]
 
 [params]
 
-    # You can use Markdown syntax for urls [text](//url.to/source) for
-    # most longer texts.
-
-    # To provide some metadata for search engines feel free to add a few
-    # information about you and your website.
     name = "Mr. Hugo"
     description = "My awesome description"
 
-    # Since this template is static, the contact form uses www.formspree.io as a
-    # proxy. The form makes a POST request to their servers to send the actual
-    # email. Visitors can send up to a 1000 emails each month for free.
-    #
-    # What you need to do for the setup?
-    #
-    # - set your email address under 'email' below
-    # - upload the generated site to your server
-    # - send a dummy email youself to confirm your account
-    # - click the confirm link in the email from www.formspree.io
-    # - you're done. Happy mailing!
     email = "your@email.com"
 
     # Custom assets
@@ -63,12 +48,8 @@ disableKinds = ["RSS"]
         name = "Mr. Hugo"
         subtitle = "Blogger - Programmer - Gopher"
 
-
     [params.portfolio]
-        # All projects defined in their own files. You can find example projects
-        # at 'exampleSite/data/projects'. Copy the 'projects' folder into the 'data' directory
-        # at the root of this Hugo site.
-        # For more informtion take a look at the README.
+
         title = "Portfolio"
 
         [params.portfolio.modal]
@@ -158,45 +139,45 @@ disableKinds = ["RSS"]
   recent_posts_number = 2
 
 [menu]
-  [[menu.nav]]
-    name = "Home"
-    url = "/"
-    weight = 1
-  [[menu.nav]]
+#  [[menu.nav]]
+#    name = "Home"
+#    url = "/"
+#    weight = 1
+  [[menu.nav1]]
     name = "Taal"
     url = "/taal/"
     weight = 2
-  [[menu.nav]]
+  [[menu.nav1]]
     name = "Muziek"
     url = "/muziek/"
     weight = 3
-  [[menu.nav]]
+  [[menu.nav1]]
     name = "Land en Volk"
     url = "/land-en-volk/"
     weight = 4
 
-  [[menu.nav]]
-    name = "Tags"
-    url = "/tags/"
-    weight = 6
-
-  [[menu.nav]]
-    name = "Genres (mzk)"
+#  [[menu.nav]]
+#    name = "Tags"
+#    url = "/tags/"
+#    weight = 6
+#
+  [[menu.nav2]]
+    name = "Genres"
     url = "/genres/"
     weight = 7
-
-  [[menu.nav]]
-    name = "Artiesten (mzk)"
-    url = "/artiesten/"
-    weight = 7
-
-  [[menu.nav]]
-    name = "Onderwerpen (l&v)"
+#
+#  [[menu.nav]]
+#    name = "Artiesten (mzk)"
+#    url = "/artiesten/"
+#    weight = 7
+#
+  [[menu.nav2]]
+    name = "Onderwerpen"
     url = "/onderwerpen/"
     weight = 8
 
-  [[menu.nav]]
-    name = "Categorieën (taal)"
+  [[menu.nav2]]
+    name = "Categorieën"
     url = "/categorieën/"
     weight = 9
 

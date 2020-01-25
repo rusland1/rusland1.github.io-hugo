@@ -29,9 +29,10 @@
 
     .masthead-heading {
       font-family: $top-font-family;
+      white-space: nowrap;
       font-size: 18rem;
       font-weight: normal;
-      letter-spacing: 3.4rem;
+      letter-spacing: 2.4rem;
 
       /*line-height: 3.5rem;*/
     }

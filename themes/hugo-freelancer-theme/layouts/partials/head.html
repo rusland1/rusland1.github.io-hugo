@@ -3,12 +3,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="{{ with .Site.Params.description }}{{ . }}{{ end }}">
 <meta name="author" content="{{ with .Site.Params.name }}{{ . }}{{ end }}">
-{{ .Hugo.Generator }}
+{{ hugo.Generator }}
 <title>{{ .Site.Title }}</title>
 {{ $style := resources.Get "scss/freelancer.scss" | resources.ToCSS }}
 <link rel="stylesheet" href="{{ $style.Permalink }}">
 
 {{ "<!-- Custom Fonts -->" | safeHTML }}
-<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+<link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
