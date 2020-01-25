@@ -1,17 +1,25 @@
 <!DOCTYPE html>
-<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
-    <head>
-        {{ partial "head.html" . }}
-    </head>
-    <body id="page-top" class="index">
+<html lang="en">
 
-        {{ partial "nav.html" . }}
+<head>
+    {{ partial "head.html" . }}
+</head>
 
-        {{ partial "portfolio-grid.html" . }}
+<body id="page-top">
 
-        {{ partial "footer.html" . }}
-        {{ partial "modals.html" . }}
-        {{ partial "js.html" . }}
+  {{ partial "nav.html" . }}
+  {{ partial "header.html" . }}
 
-    </body>
+  {{ partial "portfolio-grid.html" . }}
+
+
+  {{ partial "about.html" . }}
+  {{/* partial "contact.html" . */}}
+
+  {{ partial "footer.html" . }}
+  {{ partial "js.html" . }}
+
+</body>
+
 </html>
+

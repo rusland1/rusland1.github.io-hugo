@@ -1,0 +1,29 @@
+// Styling for page sections
+.page-section {
+  padding: 6rem 0;
+  .page-section-heading {
+    font-size: 2.25rem;
+    line-height: 2rem;
+  }
+  @include media-breakpoint-up(lg) {
+    .page-section-heading {
+      font-size: 3rem;
+      line-height: 2.5rem;
+    }
+  }
+}
+
+.bg-main-red {
+ background-color: $main-red;
+}
+
+a {
+  h1,h2,h3,h4,h5,h6 {
+    color: black;
+    line-height:160%;
+    text-transform: uppercase;
+    transform: scale(1.0, 1.6);
+    margin:10% 0;
+  }
+
+}
