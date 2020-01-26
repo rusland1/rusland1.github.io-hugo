@@ -16,9 +16,7 @@
   .xxmasthead-subheading {
     font-size: 1.25rem;
   }
-  .xxmasthead-avatar {
-    width: 15rem;
-  }
+
 }
 
 @include media-breakpoint-up(lg) {
@@ -26,8 +24,11 @@
 
     padding-top: calc(0rem + 107px);
     padding-bottom: 1rem;
+    background:  url(../img/radio-r.png) right 10% bottom 35px no-repeat, url(../img/radio-l.png) left 10% bottom 35px no-repeat #FF272E;
+
 
     .masthead-heading {
+
       font-family: $top-font-family;
       white-space: nowrap;
       font-size: 18rem;

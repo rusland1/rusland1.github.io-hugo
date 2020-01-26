@@ -6,6 +6,8 @@ theme = "hugo-freelancer-theme"
 relativeURLs = true
 canonifyURLs = false
 
+summarylength = 40
+
 MetaDataFormat = "yaml"
 DefaultContentLanguage = "nl"
 SectionPagesMenu = "main"

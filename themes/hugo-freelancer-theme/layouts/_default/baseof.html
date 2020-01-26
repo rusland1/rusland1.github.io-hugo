@@ -8,15 +8,10 @@
 <body id="page-top">
 
   {{ partial "nav.html" . }}
-  {{ partial "header.html" . }}
 
-  {{ partial "portfolio-grid.html" . }}
+  {{ block "main" . }}{{ end }}
 
-
-  {{/* partial "about.html" . */}}
-  {{/* partial "contact.html" . */}}
-
-  {{/* partial "footer.html" . */}}
+  {{ partial "footer.html" . }}
   {{ partial "js.html" . }}
 
 </body>

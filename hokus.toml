@@ -18,19 +18,15 @@ dataformat = "toml"
 itemtitle = "Post"
 
   [[collections.fields]]
-  key = "info"
-  type = "info"
-  content = "# Info\nYou can write custom instructions here."
-
-  [[collections.fields]]
   key = "title"
   title = "Title"
   type = "string"
 
   [[collections.fields]]
-  key = "mainContent"
-  title = "Content"
-  type = "markdown"
+  key = "categories"
+  title = "Categorieën"
+  type = "chips"
+
 
   [[collections.fields]]
   key = "pubdate"
@@ -52,17 +48,21 @@ itemtitle = "Post"
     "jpg",
     "gif"
   ]
+  [[collections.fields.fields]]
+  key = "thumb"
+  title = "Thumbnail"
+  type = "bundle-image-thumbnail"
 
-    [[collections.fields.fields]]
-    key = "title"
-    title = "Title"
-    type = "string"
+  [[collections.fields.fields]]
+  key = "title"
+  title = "Title"
+  type = "string"
 
-    [[collections.fields.fields]]
-    key = "description"
-    title = "Description"
-    type = "string"
-    multiLine = true
+  [[collections.fields]]
+  key = "mainContent"
+  title = "Content"
+  type = "markdown"
+
 
 [[collections]]
 

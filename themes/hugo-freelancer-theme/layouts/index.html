@@ -1,5 +1,26 @@
 {{ define "main" }}
-  <main id="main">
+<main id="main">
 
-  </main>
+    <section class="page-section portfolio" id="portfolio">
+        <div class="container">
+
+            <!-- Portfolio Grid Items -->
+            <div class="row">
+
+                {{ range .Site.RegularPages.ByPublishDate.Reverse }}
+                {{ $pagePath := .Permalink }}
+
+                {{ partial "article-in-grid.html" . }}
+
+
+                {{ end }}
+
+
+            </div>
+            <!-- /.row -->
+
+        </div>
+    </section>
+
+</main>
 {{ end }}

@@ -1,31 +1,13 @@
 <!-- Portfolio Section -->
-<section class="page-section portfolio" id="portfolio">
-    <div class="container">
+    <div class="container mt-3">
 
         <!-- Portfolio Grid Items -->
-        <div class="row">
+        <div class="row articlegrid">
 
-          {{ range .Site.RegularPages.ByPublishDate.Reverse }}
+          {{ range .Pages.ByPublishDate.Reverse }}
           {{ $pagePath := .Permalink }}
 
-            <div class="col-md-6 col-lg-4">
-                <div class="portfolio-item mx-auto">
-
-                    <a href="{{ .RelPermalink }}">
-                      <h2>{{ .Title }}</h2>
-                    </a>
-                    {{ .Summary }}
-
-                    {{ $images := .Resources.ByType "image" }}
-                    {{ range first 1 $images }}
-                    {{ $imageResource :=  .  }}
-                    {{ $resized := $imageResource.Fill "500x500" }}
-                    <img class="img-fluid" src="{{ $resized.RelPermalink }}" />
-                    {{ end }}
-
-                </div>
-            </div>
-
+          {{ partial "article-in-grid.html" . }}
 
           {{ end }}
 
@@ -34,5 +16,3 @@
         <!-- /.row -->
 
     </div>
-</section>
-
