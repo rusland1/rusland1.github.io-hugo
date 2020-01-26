@@ -1,19 +1,47 @@
-<!-- Masthead -->
-<header class="masthead bg-main-red text-center">
+{{ if eq .wp.Section "taal" }}
+  {{.ctx.Scratch.Set "colorclass" "taal" }}
+  {{.ctx.Scratch.Set "titel" "taal" }}
+{{ else if eq .wp.Section "muziek" }}
+  {{.ctx.Scratch.Set "colorclass" "muziek" }}
+  {{.ctx.Scratch.Set "titel" "muziek" }}
+{{ else if eq .wp.Section "land-en-volk" }}
+  {{.ctx.Scratch.Set "colorclass" "landenvolk" }}
+  {{.ctx.Scratch.Set "titel" "Land & Volk" }}
+{{ end }}
+
+<header class="masthead bg-h{{.ctx.Scratch.Get "colorclass"}} text-center">
     <div class="container d-flex align-items-center flex-column">
-        <h1 class="masthead-heading text-uppercase mb-0">{{.Section}}</h1>
+        <h1 class="masthead-heading text-uppercase mb-0">{{.ctx.Scratch.Get "titel"}}</h1>
     </div>
 
-    <div class="container-fluid d-flex align-items-center flex-column subsectionmenu" style="">
+    <div class="container-fluid d-flex align-items-center flex-column subsectionmenu bg-{{.ctx.Scratch.Get "colorclass"}}" style="">
 
         <div class="container-fluid d-flex" style="z-index:999999">
             <div class="flex-fill d-flex">
 
-                {{ range .Site.Taxonomies.onderwerpen }}
-                <div class="flex-fill text-center textitems">
-                    <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
-                </div>
+                {{ if eq .wp.Section "taal" }}
+                    {{ range .ctx.Site.Taxonomies.categories }}
+                    <div class="flex-fill text-center textitems">
+                        <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+                    </div>
+                    {{ end }}
+
+                {{ else if eq .wp.Section "muziek" }}
+                    {{ range .ctx.Site.Taxonomies.genres }}
+                    <div class="flex-fill text-center textitems">
+                        <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+                    </div>
+                    {{ end }}
+
+                {{ else if eq .wp.Section "land-en-volk" }}
+                    {{ range .ctx.Site.Taxonomies.onderwerpen }}
+                    <div class="flex-fill text-center textitems">
+                        <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+                    </div>
+                    {{ end }}
+
                 {{ end }}
+
 
             </div>
 

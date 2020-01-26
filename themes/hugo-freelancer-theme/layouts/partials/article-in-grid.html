@@ -5,7 +5,7 @@
                 <div class="mb-2">
                     {{ .Summary }}
                 </div>
-                <div class="d-flexflex-grow-1 flex-fill bg-main-red" style="overflow: hidden;">
+                <div class="d-flexflex-grow-1 flex-fill bg-secondary" style="overflow: hidden;">
                     {{ $images := .Resources.ByType "image" }}
                     {{ range first 1 $images }}
                     {{ $imageResource :=  .  }}

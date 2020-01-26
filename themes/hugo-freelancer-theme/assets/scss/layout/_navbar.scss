@@ -11,7 +11,7 @@
 }
 
 .subsectionmenu{
-  background-color: #FF272E;
+//  background-color: #FF272E;
 
   a{
     font-family: $subtop-font-family;
@@ -29,15 +29,18 @@
   z-index:300;
 }
 
-.logorood{
+.logo-{
+  background-color: #FFF;
+}
+.logo-muziek{
   background-color: #FF272E;
 }
 
-.logoblauw {
+.logo-landenvolk {
   background-color:#0532CD;
 }
 
-.logogroen {
+.logo-taal {
   background-color: #05DA0A;
 }
 
@@ -58,7 +61,6 @@
     left:0px;
     right:0px;
     height:138px;
-    background-color: #FF272E;
   }
 
   .navcolorbg-shrink{

@@ -1,6 +1,17 @@
-  <nav class="navbar navbar-expand-lg text-uppercase fixed-top" id="mainNav">
+{{ if eq .Section "taal" }}
+{{.Scratch.Set "colorclass" "taal" }}
+{{.Scratch.Set "titel" "taal" }}
+{{ else if eq .Section "muziek" }}
+{{.Scratch.Set "colorclass" "muziek" }}
+{{.Scratch.Set "titel" "muziek" }}
+{{ else if eq .Section "land-en-volk" }}
+{{.Scratch.Set "colorclass" "landenvolk" }}
+{{.Scratch.Set "titel" "Land & Volk" }}
+{{ end }}
 
-    <div class="navcolorbg">
+<nav class="navbar navbar-expand-lg text-uppercase fixed-top" id="mainNav">
+
+    <div class="navcolorbg bg-{{.Scratch.Get "colorclass"}}">
     </div>
 
     <div class="container-fluid d-flex topmenuwithlines" style="z-index:999999">
@@ -20,7 +31,7 @@
         </div>
         <div class="">
             <div class="sticky">
-                <span class="circle logorood"></span>
+                <span class="circle logo-{{.Scratch.Get "colorclass"}}"></span>
                 <img src="/img/logobg2.png" id="logobg" />
                 <a href="/"><img src="/img/logoseq/image-0001.png" id="logo" /></a>
             </div>

@@ -1,14 +1,17 @@
-.masthead {
-  /*
-   h1{
-    font-family: $top-font-family;
-    font-size: 100px;
+  .bg-{
+    background: white;
   }
-  */
-  /*
-  padding-top: calc(6rem + 74px);
-  padding-bottom: 6rem;
-  */
+  .bg-landenvolk{
+    background: $main-blue;
+  }
+  .bg-muziek{
+    background: $main-red;
+  }
+  .bg-taal{
+    background: $main-green;
+  }
+
+.masthead {
   .xxmasthead-heading {
     font-size: 2.75rem;
     line-height: 2.75rem;
@@ -20,12 +23,21 @@
 }
 
 @include media-breakpoint-up(lg) {
+
+  .bg-hlandenvolk{
+    background:  url(../img/radio-r.png) right 10% bottom 35px no-repeat, url(../img/radio-l.png) left 10% bottom 35px no-repeat $main-blue;
+  }
+  .bg-hmuziek{
+    background:  url(../img/radio-r.png) right 10% bottom 35px no-repeat, url(../img/radio-l.png) left 10% bottom 35px no-repeat $main-red;
+  }
+  .bg-htaal{
+    background:  url(../img/radio-r.png) right 10% bottom 35px no-repeat, url(../img/radio-l.png) left 10% bottom 35px no-repeat $main-green;
+  }
+
   .masthead {
 
     padding-top: calc(0rem + 107px);
     padding-bottom: 1rem;
-    background:  url(../img/radio-r.png) right 10% bottom 35px no-repeat, url(../img/radio-l.png) left 10% bottom 35px no-repeat #FF272E;
-
 
     .masthead-heading {
 
@@ -35,7 +47,6 @@
       font-weight: normal;
       letter-spacing: 2.4rem;
 
-      /*line-height: 3.5rem;*/
     }
     .masthead-subheading {
       font-size: 1.5rem;

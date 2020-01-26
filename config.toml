@@ -14,18 +14,13 @@ SectionPagesMenu = "main"
 Paginate = 3 # this is set low for demonstrating with dummy content. Set to a higher number
 googleAnalytics = ""
 enableRobotsTXT = true
-
-#[sitemap]
-#  changefreq = "monthly"
-#  priority = 0.5
-#  filename = "sitemap.xml"
 disableKinds = ["RSS"]
 
 
 [taxonomies]
   tag = "tags"
   genre = "genres"
-  categorie = "categorieën"
+  categories = "categories"
   onderwerp = "onderwerpen"
   artiest = "artiesten"
 
@@ -122,9 +117,6 @@ disableKinds = ["RSS"]
         [params.footer.credits]
             title = "About Freelancer"
             text = "Freelance is a free to use, open source Bootstrap theme created by [Start Bootstrap](//startbootstrap.com)."
-
-
-
 
   favicon = ""
   description = "over Rusland"
